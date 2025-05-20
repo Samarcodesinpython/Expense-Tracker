@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.expensai.controller.DashboardController">
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10;">
+            <Label text="ExpensAI" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+            <Button fx:id="addExpenseButton" text="Add Expense" />
+            <Button fx:id="scanReceiptButton" text="Scan Receipt" />
+            <Button fx:id="scanCameraButton" text="Scan Receipt (Camera)" />
+            <ToggleButton fx:id="themeToggleButton" text="Dark Mode" />
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="30" alignment="TOP_CENTER" style="-fx-padding: 40;">
+            <Label fx:id="welcomeLabel" text="Welcome back, User!" style="-fx-font-size: 24px;" />
+            <!-- Cards -->
+            <GridPane hgap="20" vgap="10">
+                <Label fx:id="totalIncomeLabel" text="Total Income: $0.00" GridPane.columnIndex="0" GridPane.rowIndex="0" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+                <Label fx:id="totalExpensesLabel" text="Total Expenses: $0.00" GridPane.columnIndex="1" GridPane.rowIndex="0" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+                <Label fx:id="remainingBudgetLabel" text="Remaining Budget: $0.00" GridPane.columnIndex="2" GridPane.rowIndex="0" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+                <Label fx:id="aiPredictionLabel" text="AI Prediction: $0.00" GridPane.columnIndex="3" GridPane.rowIndex="0" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+            </GridPane>
+            <!-- Charts -->
+            <GridPane hgap="20" vgap="10">
+                <PieChart fx:id="expensePieChart" prefWidth="300" prefHeight="250" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <LineChart fx:id="spendingTrendChart" prefWidth="400" prefHeight="250" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <xAxis>
+                        <CategoryAxis label="Month" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="Amount" />
+                    </yAxis>
+                </LineChart>
+            </GridPane>
+            <!-- Alerts -->
+            <VBox spacing="10" style="-fx-padding: 10;">
+                <Label text="Alerts &amp; Reminders" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+                <VBox fx:id="alertsContainer" spacing="5" />
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

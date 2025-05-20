@@ -1,0 +1,233 @@
+/* Light Theme CSS */
+
+.root {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-background-color: #f8f9fa;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 10px;
+}
+
+.logo-text {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3b82f6;
+}
+
+/* Sidebar */
+.sidebar {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 1 0 0;
+    -fx-min-width: 200px;
+    -fx-pref-width: 200px;
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #555555;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 15px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-alignment: center-left;
+    -fx-max-width: infinity;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+.sidebar-button.active {
+    -fx-background-color: #e6f2ff;
+    -fx-text-fill: #3b82f6;
+    -fx-font-weight: bold;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    -fx-background-color: #f8f9fa;
+}
+
+.welcome-text {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Cards */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 5, 0, 0, 1);
+}
+
+.card-title {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666666;
+    -fx-font-weight: normal;
+}
+
+.card-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-padding: 5 0 5 0;
+}
+
+.card-trend-up {
+    -fx-text-fill: #10b981;
+    -fx-font-size: 12px;
+}
+
+.card-trend-down {
+    -fx-text-fill: #ef4444;
+    -fx-font-size: 12px;
+}
+
+.income-card {
+    -fx-border-color: #10b981;
+    -fx-border-width: 0 0 0 4px;
+}
+
+.expense-card {
+    -fx-border-color: #3b82f6;
+    -fx-border-width: 0 0 0 4px;
+}
+
+.budget-card {
+    -fx-border-color: #8b5cf6;
+    -fx-border-width: 0 0 0 4px;
+}
+
+.ai-card {
+    -fx-border-color: #f59e0b;
+    -fx-border-width: 0 0 0 4px;
+}
+
+.chart-card {
+    -fx-min-height: 300px;
+}
+
+/* Section Titles */
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-padding: 10 0 5 0;
+}
+
+/* Alerts */
+.alert-warning {
+    -fx-background-color: #fff7ed;
+    -fx-border-color: #fdba74;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 10px;
+    -fx-text-fill: #c2410c;
+}
+
+.alert-danger {
+    -fx-background-color: #fef2f2;
+    -fx-border-color: #fca5a5;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 10px;
+    -fx-text-fill: #b91c1c;
+}
+
+.alert-info {
+    -fx-background-color: #eff6ff;
+    -fx-border-color: #93c5fd;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 10px;
+    -fx-text-fill: #1e40af;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #333333;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-padding: 8px 12px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.primary-button {
+    -fx-background-color: #3b82f6;
+    -fx-text-fill: white;
+}
+
+.primary-button:hover {
+    -fx-background-color: #2563eb;
+}
+
+.cancel-button {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #333333;
+}
+
+.cancel-button:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+/* Modal */
+.modal-container {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-min-width: 500px;
+    -fx-max-width: 800px;
+}
+
+.modal-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Form Elements */
+.text-field, .text-area, .combo-box, .date-picker {
+    -fx-background-color: white;
+    -fx-border-color: #d1d5db;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 8px;
+}
+
+.text-field:focused, .text-area:focused, .combo-box:focused, .date-picker:focused {
+    -fx-border-color: #3b82f6;
+}
+
+.helper-text {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6b7280;
+}
+
+/* Receipt Image */
+.receipt-image {
+    -fx-border-color: #d1d5db;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}

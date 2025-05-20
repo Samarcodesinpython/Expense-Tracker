@@ -1,0 +1,316 @@
+/* Dark Theme CSS */
+
+.root {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-background-color: #181a1b;
+    -fx-text-fill: #f1f1f1;
+}
+
+.label {
+    -fx-text-fill: #f1f1f1;
+}
+
+.button, .toggle-button {
+    -fx-background-color: #23272a;
+    -fx-text-fill: #f1f1f1;
+}
+
+.button:hover, .toggle-button:hover {
+    -fx-background-color: #2c2f33;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    -fx-background-color: #181825;
+    -fx-border-color: #313244;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 10px;
+}
+
+.logo-text {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #89b4fa;
+}
+
+/* Sidebar */
+.sidebar {
+    -fx-background-color: #181825;
+    -fx-border-color: #313244;
+    -fx-border-width: 0 1 0 0;
+    -fx-min-width: 200px;
+    -fx-pref-width: 200px;
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #cdd6f4;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 15px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-alignment: center-left;
+    -fx-max-width: infinity;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #313244;
+}
+
+.sidebar-button.active {
+    -fx-background-color: #313244;
+    -fx-text-fill: #89b4fa;
+    -fx-font-weight: bold;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    -fx-background-color: #1e1e2e;
+}
+
+.welcome-text {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #cdd6f4;
+}
+
+/* Cards */
+.card {
+    -fx-background-color: #181825;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #313244;
+    -fx-border-width: 1px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 1);
+}
+
+.card-title {
+    -fx-font-size: 14px;
+    -fx-text-fill: #a6adc8;
+    -fx-font-weight: normal;
+}
+
+.card-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #cdd6f4;
+    -fx-padding: 5 0 5 0;
+}
+
+.card-trend-up {
+    -fx-text-fill: #a6e3a1;
+    -fx-font-size: 12px;
+}
+
+.card-trend-down {
+    -fx-text-fill: #f38ba8;
+    -fx-font-size: 12px;
+}
+
+.income-card {
+    -fx-border-color: #a6e3a1;
+    -fx-border-width: 0 0 0 4px;
+}
+
+.expense-card {
+    -fx-border-color: #89b4fa;
+    -fx-border-width: 0 0 0 4px;
+}
+
+.budget-card {
+    -fx-border-color: #cba6f7;
+    -fx-border-width: 0 0 0 4px;
+}
+
+.ai-card {
+    -fx-border-color: #fab387;
+    -fx-border-width: 0 0 0 4px;
+}
+
+.chart-card {
+    -fx-min-height: 300px;
+}
+
+/* Charts */
+.chart {
+    -fx-background-color: transparent;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+}
+
+.axis {
+    -fx-tick-label-fill: #a6adc8;
+}
+
+.chart-series-line {
+    -fx-stroke-width: 2px;
+}
+
+/* Section Titles */
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #cdd6f4;
+    -fx-padding: 10 0 5 0;
+}
+
+/* Alerts */
+.alert-warning {
+    -fx-background-color: #2e2914;
+    -fx-border-color: #fab387;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 10px;
+    -fx-text-fill: #fab387;
+}
+
+.alert-danger {
+    -fx-background-color: #2a161b;
+    -fx-border-color: #f38ba8;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 10px;
+    -fx-text-fill: #f38ba8;
+}
+
+.alert-info {
+    -fx-background-color: #1e2030;
+    -fx-border-color: #89b4fa;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 10px;
+    -fx-text-fill: #89b4fa;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: #313244;
+    -fx-text-fill: #cdd6f4;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-padding: 8px 12px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #45475a;
+}
+
+.primary-button {
+    -fx-background-color: #89b4fa;
+    -fx-text-fill: #1e1e2e;
+}
+
+.primary-button:hover {
+    -fx-background-color: #74c7ec;
+}
+
+.cancel-button {
+    -fx-background-color: #313244;
+    -fx-text-fill: #cdd6f4;
+}
+
+.cancel-button:hover {
+    -fx-background-color: #45475a;
+}
+
+/* Modal */
+.modal-container {
+    -fx-background-color: #181825;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #313244;
+    -fx-border-width: 1px;
+    -fx-min-width: 500px;
+    -fx-max-width: 800px;
+}
+
+.modal-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #cdd6f4;
+}
+
+/* Form Elements */
+.text-field, .text-area, .combo-box, .date-picker {
+    -fx-background-color: #1e1e2e;
+    -fx-border-color: #45475a;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 8px;
+    -fx-text-fill: #cdd6f4;
+}
+
+.text-field:focused, .text-area:focused, .combo-box:focused, .date-picker:focused {
+    -fx-border-color: #89b4fa;
+}
+
+.helper-text {
+    -fx-font-size: 12px;
+    -fx-text-fill: #a6adc8;
+}
+
+/* Receipt Image */
+.receipt-image {
+    -fx-border-color: #45475a;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+/* Date Picker */
+.date-picker-popup {
+    -fx-background-color: #181825;
+    -fx-border-color: #313244;
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #181825;
+}
+
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: #cdd6f4;
+}
+
+.date-picker-popup .week-number-cell {
+    -fx-text-fill: #a6adc8;
+}
+
+.date-picker-popup .day-cell {
+    -fx-background-color: #1e1e2e;
+    -fx-text-fill: #cdd6f4;
+}
+
+.date-picker-popup .day-cell:hover {
+    -fx-background-color: #313244;
+}
+
+.date-picker-popup .selected {
+    -fx-background-color: #89b4fa;
+    -fx-text-fill: #1e1e2e;
+}
+
+/* Combo Box */
+.combo-box-popup .list-view {
+    -fx-background-color: #1e1e2e;
+    -fx-border-color: #313244;
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: #1e1e2e;
+    -fx-text-fill: #cdd6f4;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #313244;
+}

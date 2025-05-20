@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.expensai.controller.AddExpenseController" spacing="15" styleClass="modal-container">
+   <padding>
+      <Insets top="20" right="20" bottom="20" left="20" />
+   </padding>
+   
+   <Label styleClass="modal-title" text="Add New Expense" />
+   
+   <GridPane hgap="10" vgap="15">
+      <columnConstraints>
+         <ColumnConstraints percentWidth="30" />
+         <ColumnConstraints percentWidth="70" />
+      </columnConstraints>
+      
+      <!-- Amount Field -->
+      <Label text="Amount:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+      <HBox spacing="5" alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="0">
+         <Label text="$" />
+         <TextField fx:id="amountField" promptText="0.00" />
+      </HBox>
+      
+      <!-- Category Field -->
+      <Label text="Category:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+      <ComboBox fx:id="categoryComboBox" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      
+      <!-- Date Field -->
+      <Label text="Date:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+      <DatePicker fx:id="datePicker" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      
+      <!-- Description Field -->
+      <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+      <TextArea fx:id="descriptionArea" promptText="Enter a description" prefRowCount="3" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      
+      <!-- Receipt Upload -->
+      <Label text="Receipt:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+      <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <HBox spacing="10" alignment="CENTER_LEFT">
+            <Button fx:id="uploadReceiptButton" text="Upload Receipt" />
+            <Label fx:id="receiptPathLabel" text="No file selected" />
+         </HBox>
+         <Label styleClass="helper-text" text="Upload a receipt image for automatic processing" />
+      </VBox>
+   </GridPane>
+   
+   <!-- Buttons -->
+   <HBox spacing="10" alignment="CENTER_RIGHT">
+      <Button fx:id="cancelButton" text="Cancel" styleClass="cancel-button" />
+      <Button fx:id="saveButton" text="Save Expense" styleClass="primary-button" />
+   </HBox>
+</VBox>

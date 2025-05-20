@@ -1,0 +1,8 @@
+com\expensai\util\ThemeManager.class
+com\expensai\service\OCRService.class
+com\expensai\controller\DashboardController.class
+com\expensai\service\DatabaseService.class
+com\expensai\util\ThemeManager$Theme.class
+com\expensai\model\Expense.class
+com\expensai\ExpensAIApplication.class
+com\expensai\model\Category.class

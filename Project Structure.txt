@@ -1,0 +1,55 @@
+src/
+├── main/
+│   ├── java/
+│   │   └── com/
+│   │       └── expensai/
+│   │           ├── ExpensAIApplication.java       // Main application class
+│   │           ├── controller/                    // UI controllers
+│   │           │   ├── DashboardController.java
+│   │           │   ├── AddExpenseController.java
+│   │           │   ├── ScanReceiptController.java
+│   │           │   ├── BudgetPlannerController.java
+│   │           │   ├── ReportsController.java
+│   │           │   └── SettingsController.java
+│   │           ├── model/                         // Data models
+│   │           │   ├── Expense.java
+│   │           │   ├── Budget.java
+│   │           │   ├── Category.java
+│   │           │   ├── User.java
+│   │           │   └── Alert.java
+│   │           ├── service/                       // Business logic
+│   │           │   ├── DatabaseService.java       // JDBC connection and operations
+│   │           │   ├── ExpenseService.java
+│   │           │   ├── BudgetService.java
+│   │           │   ├── OCRService.java            // Tesseract integration
+│   │           │   ├── PredictionService.java     // AI forecasting
+│   │           │   └── ReportService.java         // PDF generation
+│   │           ├── util/                          // Utility classes
+│   │           │   ├── ThemeManager.java          // Dark/Light mode
+│   │           │   ├── AlertManager.java
+│   │           │   └── DateUtils.java
+│   │           └── dao/                           // Data Access Objects
+│   │               ├── ExpenseDAO.java
+│   │               ├── BudgetDAO.java
+│   │               ├── CategoryDAO.java
+│   │               └── UserDAO.java
+│   └── resources/
+│       ├── com/expensai/view/                     // FXML files
+│       │   ├── Dashboard.fxml
+│       │   ├── AddExpense.fxml
+│       │   ├── ScanReceipt.fxml
+│       │   ├── BudgetPlanner.fxml
+│       │   ├── Reports.fxml
+│       │   └── Settings.fxml
+│       ├── css/
+│       │   ├── light-theme.css
+│       │   └── dark-theme.css
+│       └── images/
+│           ├── logo.png
+│           └── icons/
+└── test/                                          // Unit tests
+    └── java/
+        └── com/
+            └── expensai/
+                ├── service/
+                └── dao/
