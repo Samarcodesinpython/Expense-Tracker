@@ -4,24 +4,30 @@ import java.time.LocalDate;
 
 public class Expense {
     private int id;
-    private int userId;
     private double amount;
-    private int categoryId;
-    private String description;
     private LocalDate date;
+    private Category category;
+    private String description;
     private String receiptPath;
-    private String categoryName; // For display purposes
-    private String categoryColor; // For display purposes
     
     // Constructors
     public Expense() {}
     
-    public Expense(int userId, double amount, int categoryId, String description, LocalDate date) {
-        this.userId = userId;
+    public Expense(double amount, LocalDate date, Category category, String description, String receiptPath) {
         this.amount = amount;
-        this.categoryId = categoryId;
-        this.description = description;
         this.date = date;
+        this.category = category;
+        this.description = description;
+        this.receiptPath = receiptPath;
+    }
+    
+    public Expense(int id, double amount, LocalDate date, Category category, String description, String receiptPath) {
+        this.id = id;
+        this.amount = amount;
+        this.date = date;
+        this.category = category;
+        this.description = description;
+        this.receiptPath = receiptPath;
     }
     
     // Getters and Setters
@@ -33,36 +39,12 @@ public class Expense {
         this.id = id;
     }
     
-    public int getUserId() {
-        return userId;
-    }
-    
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-    
     public double getAmount() {
         return amount;
     }
     
     public void setAmount(double amount) {
         this.amount = amount;
-    }
-    
-    public int getCategoryId() {
-        return categoryId;
-    }
-    
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
-    }
-    
-    public String getDescription() {
-        return description;
-    }
-    
-    public void setDescription(String description) {
-        this.description = description;
     }
     
     public LocalDate getDate() {
@@ -73,6 +55,22 @@ public class Expense {
         this.date = date;
     }
     
+    public Category getCategory() {
+        return category;
+    }
+    
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+    
+    public String getDescription() {
+        return description;
+    }
+    
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    
     public String getReceiptPath() {
         return receiptPath;
     }
@@ -81,30 +79,8 @@ public class Expense {
         this.receiptPath = receiptPath;
     }
     
-    public String getCategoryName() {
-        return categoryName;
-    }
-    
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
-    
-    public String getCategoryColor() {
-        return categoryColor;
-    }
-    
-    public void setCategoryColor(String categoryColor) {
-        this.categoryColor = categoryColor;
-    }
-    
     @Override
     public String toString() {
-        return "Expense{" +
-                "id=" + id +
-                ", amount=" + amount +
-                ", category='" + categoryName + '\'' +
-                ", description='" + description + '\'' +
-                ", date=" + date +
-                '}';
+        return String.format("%s - ₹%.2f - %s", date, amount, category.getName());
     }
 }

@@ -2,7 +2,13 @@ com\expensai\util\ThemeManager.class
 com\expensai\service\OCRService.class
 com\expensai\controller\DashboardController.class
 com\expensai\service\DatabaseService.class
+com\expensai\controller\ManageCategoriesController.class
+com\expensai\controller\ManageCategoriesController$2.class
 com\expensai\util\ThemeManager$Theme.class
+com\expensai\controller\ScanReceiptController.class
+com\expensai\controller\ManageCategoriesController$1.class
 com\expensai\model\Expense.class
 com\expensai\ExpensAIApplication.class
+com\expensai\model\ExpenseDAO.class
+com\expensai\model\CategoryDAO.class
 com\expensai\model\Category.class

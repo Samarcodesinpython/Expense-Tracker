@@ -2,21 +2,24 @@
 
 .root {
     -fx-font-family: 'Segoe UI', Arial, sans-serif;
-    -fx-background-color: #181a1b;
-    -fx-text-fill: #f1f1f1;
+    -fx-background-color: #1a1a1a;
+    -fx-text-fill: #ffffff;
 }
 
 .label {
-    -fx-text-fill: #f1f1f1;
+    -fx-text-fill: #ffffff;
 }
 
 .button, .toggle-button {
-    -fx-background-color: #23272a;
-    -fx-text-fill: #f1f1f1;
+    -fx-background-color: #2d2d2d;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #3d3d3d;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
 }
 
 .button:hover, .toggle-button:hover {
-    -fx-background-color: #2c2f33;
+    -fx-background-color: #3d3d3d;
 }
 
 /* Top Navigation Bar */
@@ -134,23 +137,67 @@
 
 /* Charts */
 .chart {
-    -fx-background-color: transparent;
+    -fx-background-color: #2d2d2d;
+    -fx-text-fill: #ffffff;
 }
 
-.chart-plot-background {
-    -fx-background-color: transparent;
+.chart-title {
+    -fx-text-fill: #ffffff;
 }
 
-.chart-legend {
-    -fx-background-color: transparent;
+.axis-label {
+    -fx-text-fill: #ffffff;
 }
 
 .axis {
-    -fx-tick-label-fill: #a6adc8;
+    -fx-tick-label-fill: #ffffff;
 }
 
-.chart-series-line {
-    -fx-stroke-width: 2px;
+.chart-legend {
+    -fx-background-color: #2d2d2d;
+    -fx-text-fill: #ffffff;
+}
+
+.table-view {
+    -fx-background-color: #2d2d2d;
+    -fx-text-fill: #ffffff;
+}
+
+.table-view .column-header {
+    -fx-background-color: #3d3d3d;
+    -fx-text-fill: #ffffff;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #ffffff;
+}
+
+.table-row-cell {
+    -fx-background-color: #2d2d2d;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #252525;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #4d4d4d;
+}
+
+.scroll-pane {
+    -fx-background-color: #1a1a1a;
+}
+
+.scroll-bar {
+    -fx-background-color: #2d2d2d;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #4d4d4d;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #5d5d5d;
 }
 
 /* Section Titles */

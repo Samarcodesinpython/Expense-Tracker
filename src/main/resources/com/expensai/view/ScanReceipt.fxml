@@ -1,78 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.RowConstraints?>
 
-<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.expensai.controller.ScanReceiptController" spacing="15" styleClass="modal-container">
-   <padding>
-      <Insets top="20" right="20" bottom="20" left="20" />
-   </padding>
-   
-   <Label styleClass="modal-title" text="Scan Receipt" />
-   
-   <HBox spacing="20">
-      <!-- Left Side - Image and OCR -->
-      <VBox spacing="10" HBox.hgrow="ALWAYS" maxWidth="400">
-         <Label styleClass="section-title" text="Receipt Image" />
-         
-         <ImageView fx:id="receiptImageView" fitWidth="380" fitHeight="300" preserveRatio="true" styleClass="receipt-image" />
-         
-         <HBox spacing="10">
-            <Button fx:id="selectImageButton" text="Select Image" />
-            <Button fx:id="captureImageButton" text="Capture with Webcam" />
-            <Button fx:id="scanButton" text="Scan Receipt" />
-         </HBox>
-         
-         <Label styleClass="section-title" text="OCR Result" />
-         <TextArea fx:id="ocrResultTextArea" prefRowCount="5" wrapText="true" editable="false" />
-      </VBox>
-      
-      <!-- Right Side - Expense Form -->
-      <VBox spacing="15" HBox.hgrow="ALWAYS">
-         <Label styleClass="section-title" text="Expense Details" />
-         
-         <GridPane hgap="10" vgap="15">
-            <columnConstraints>
-               <ColumnConstraints percentWidth="30" />
-               <ColumnConstraints percentWidth="70" />
-            </columnConstraints>
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.expensai.controller.ScanReceiptController">
+    <center>
+        <VBox spacing="20" style="-fx-padding: 20;">
+            <Label text="Scan Receipt" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
             
-            <!-- Amount Field -->
-            <Label text="Amount:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-            <HBox spacing="5" alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="0">
-               <Label text="$" />
-               <TextField fx:id="amountField" promptText="0.00" />
+            <HBox spacing="20" alignment="CENTER">
+                <VBox spacing="10" style="-fx-padding: 20; -fx-background-color: #f5f5f5; -fx-background-radius: 10;">
+                    <Label text="Camera Scan" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+                    <ImageView fx:id="cameraPreview" fitWidth="300" fitHeight="200" preserveRatio="true" />
+                    <Button fx:id="startCameraButton" text="Start Camera" />
+                    <Button fx:id="captureButton" text="Capture" disable="true" />
+                </VBox>
+                
+                <VBox spacing="10" style="-fx-padding: 20; -fx-background-color: #f5f5f5; -fx-background-radius: 10;">
+                    <Label text="File Upload" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+                    <ImageView fx:id="filePreview" fitWidth="300" fitHeight="200" preserveRatio="true" />
+                    <Button fx:id="browseButton" text="Browse File" />
+                </VBox>
             </HBox>
             
-            <!-- Category Field -->
-            <Label text="Category:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-            <ComboBox fx:id="categoryComboBox" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <VBox spacing="10" style="-fx-padding: 20; -fx-background-color: #f5f5f5; -fx-background-radius: 10;">
+                <Label text="Receipt Details" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+                <GridPane hgap="10" vgap="10">
+                    <Label text="Date:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <DatePicker fx:id="datePicker" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                    
+                    <Label text="Amount:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <TextField fx:id="amountField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    
+                    <Label text="Category:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <ComboBox fx:id="categoryComboBox" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    
+                    <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                    <TextArea fx:id="descriptionArea" prefRowCount="3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                </GridPane>
+            </VBox>
             
-            <!-- Date Field -->
-            <Label text="Date:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-            <DatePicker fx:id="datePicker" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            
-            <!-- Description Field -->
-            <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-            <TextArea fx:id="descriptionArea" promptText="Enter a description" prefRowCount="3" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-         </GridPane>
-         
-         <!-- Buttons -->
-         <HBox spacing="10" alignment="CENTER_RIGHT">
-            <Button fx:id="cancelButton" text="Cancel" styleClass="cancel-button" />
-            <Button fx:id="saveButton" text="Save Expense" styleClass="primary-button" />
-         </HBox>
-      </VBox>
-   </HBox>
-</VBox>
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Button fx:id="saveButton" text="Save Receipt" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+                <Button fx:id="cancelButton" text="Cancel" style="-fx-background-color: #f44336; -fx-text-fill: white;" />
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
