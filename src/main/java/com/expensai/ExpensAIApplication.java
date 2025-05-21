@@ -5,13 +5,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import com.expensai.service.DatabaseService;
 
 public class ExpensAIApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/com/expensai/view/Dashboard.fxml"));
-        Scene scene = new Scene(root, 800, 600);
-        primaryStage.setTitle("ExpensAI - Clean Dashboard");
+        DatabaseService dbService = new DatabaseService();
+        dbService.connect(); // Establish database connection
+
+        Parent root = FXMLLoader.load(getClass().getResource("/com/expensai/view/LoginView.fxml"));
+        Scene scene = new Scene(root, 400, 300); // Adjust size for login window
+        primaryStage.setTitle("ExpensAI - Login");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class DatabaseService {
     
-    private Connection connection;
+    private static Connection connection;
     private final String DB_URL = "jdbc:sqlite:expensai.db"; // Using SQLite for simplicity
     
     public void connect() {
@@ -36,8 +36,13 @@ public class DatabaseService {
         }
     }
     
-    public Connection getConnection() {
-        return connection;
+    public static Connection getConnection() {
+        try {
+            return DriverManager.getConnection("jdbc:sqlite:expensai.db");
+        } catch (SQLException e) {
+            System.err.println("Error getting database connection: " + e.getMessage());
+            return null;
+        }
     }
     
     private void createTables() {

@@ -29,7 +29,7 @@
     </top>
     <center>
         <ScrollPane fitToWidth="true" fitToHeight="true">
-            <VBox spacing="30" alignment="TOP_CENTER" style="-fx-padding: 40;">
+            <VBox spacing="30" alignment="TOP_CENTER" style="-fx-padding: 40;" styleClass="dashboard-content">
                 <Label fx:id="welcomeLabel" text="Welcome back, User!" style="-fx-font-size: 24px;" />
                 
                 <!-- Cards -->
