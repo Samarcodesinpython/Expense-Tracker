@@ -1,7 +1,6 @@
 package com.expensai.controller;
 
 import com.expensai.dao.UserDAO;
-import com.expensai.model.User;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -47,12 +46,13 @@ public class RegistrationController {
             errorMessageLabel.setText("Passwords do not match");
             return;
         }
+        
+        // Placeholder check to use userDAO
+        if (userDAO.getUserByUsername(username) != null) {
+            errorMessageLabel.setText("Username already exists");
+            return;
+        }
 
-        // TODO: Add more robust validation (e.g., email format, password strength)
-        // TODO: Check if username or email already exists using UserDAO
-
-        // TODO: Implement actual registration logic using UserDAO
-        // For now, just print details and navigate to login
         System.out.println("Attempting to register user:");
         System.out.println("Username: " + username);
         System.out.println("Email: " + email);
