@@ -22,9 +22,7 @@
     <top>
         <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10;">
             <Label text="ExpensAI" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
-            <Button fx:id="addExpenseButton" text="Add Expense" />
             <Button fx:id="scanReceiptButton" text="Scan Receipt" />
-            <Button fx:id="scanCameraButton" text="Scan Receipt (Camera)" />
             <Button fx:id="manageCategoriesButton" text="Manage Categories" />
             <ToggleButton fx:id="themeToggleButton" text="Dark Mode" />
         </HBox>
@@ -39,7 +37,6 @@
                     <Label fx:id="totalIncomeLabel" text="Total Income: ₹0.00" GridPane.columnIndex="0" GridPane.rowIndex="0" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
                     <Label fx:id="totalExpensesLabel" text="Total Expenses: ₹0.00" GridPane.columnIndex="1" GridPane.rowIndex="0" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
                     <Label fx:id="remainingBudgetLabel" text="Remaining Budget: ₹0.00" GridPane.columnIndex="2" GridPane.rowIndex="0" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
-                    <Label fx:id="aiPredictionLabel" text="AI Prediction: ₹0.00" GridPane.columnIndex="3" GridPane.rowIndex="0" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
                 </GridPane>
 
                 <!-- Charts Grid -->
