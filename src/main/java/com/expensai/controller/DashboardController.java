@@ -28,16 +28,13 @@ public class DashboardController {
     @FXML private Label totalIncomeLabel;
     @FXML private Label totalExpensesLabel;
     @FXML private Label remainingBudgetLabel;
-    @FXML private Label aiPredictionLabel;
     @FXML private PieChart expensePieChart;
     @FXML private LineChart<String, Number> spendingTrendChart;
     @FXML private BarChart<String, Number> monthlyComparisonChart;
     @FXML private AreaChart<String, Number> savingsTrendChart;
     @FXML private VBox alertsContainer;
-    @FXML private Button addExpenseButton;
     @FXML private Button scanReceiptButton;
     @FXML private ToggleButton themeToggleButton;
-    @FXML private Button scanCameraButton;
     @FXML private Button manageCategoriesButton;
 
     private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.forLanguageTag("en-IN"));
@@ -58,7 +55,6 @@ public class DashboardController {
         totalIncomeLabel.setText("Total Income: " + currencyFormat.format(50000));
         totalExpensesLabel.setText("Total Expenses: " + currencyFormat.format(23000));
         remainingBudgetLabel.setText("Remaining Budget: " + currencyFormat.format(27000));
-        aiPredictionLabel.setText("AI Prediction: " + currencyFormat.format(24500));
     }
 
     private void setupCharts() {
@@ -120,9 +116,7 @@ public class DashboardController {
     }
 
     private void setupButtonHandlers() {
-        addExpenseButton.setOnAction(e -> alertsContainer.getChildren().add(new Label("Add Expense clicked!")));
-        scanReceiptButton.setOnAction(e -> alertsContainer.getChildren().add(new Label("Scan Receipt clicked!")));
-        scanCameraButton.setOnAction(e -> openCameraModal());
+        scanReceiptButton.setOnAction(e -> openCameraModal());
         manageCategoriesButton.setOnAction(e -> openCategoriesManagement());
         themeToggleButton.setOnAction(e -> {
             if (themeToggleButton.isSelected()) {
